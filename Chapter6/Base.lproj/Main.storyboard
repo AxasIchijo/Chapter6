@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Chapter6" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="start" id="BYZ-38-t0r" customClass="ViewController" customModule="Chapter6" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -29,6 +29,7 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="37"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="gotoTitle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fh0-Uc-FTH"/>
                                     <segue destination="Me1-6i-VAG" kind="show" id="shW-AV-WjS"/>
                                 </connections>
                             </button>
@@ -52,7 +53,7 @@
         <!--View Controller-->
         <scene sceneID="Nsr-HX-UKx">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="Me1-6i-VAG" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="question" modalPresentationStyle="fullScreen" id="Me1-6i-VAG" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bD2-Qb-bHK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -84,9 +85,11 @@
                                                 <color key="backgroundColor" systemColor="secondaryLabelColor"/>
                                             </backgroundConfiguration>
                                             <attributedString key="attributedTitle">
-                                                <fragment content="Button">
+                                                <fragment content="マインドブレイク">
                                                     <attributes>
-                                                        <font key="NSFont" size="30" name="Helvetica"/>
+                                                        <font key="NSFont" size="30" name="HiraginoSans-W3"/>
+                                                        <font key="NSOriginalFont" size="30" name="Helvetica"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
@@ -101,9 +104,11 @@
                                                 <color key="backgroundColor" systemColor="secondaryLabelColor"/>
                                             </backgroundConfiguration>
                                             <attributedString key="attributedTitle">
-                                                <fragment content="Button">
+                                                <fragment content="カードが燃える">
                                                     <attributes>
-                                                        <font key="NSFont" size="30" name="Helvetica"/>
+                                                        <font key="NSFont" size="30" name="HiraginoSans-W3"/>
+                                                        <font key="NSOriginalFont" size="30" name="Helvetica"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
@@ -118,9 +123,11 @@
                                                 <color key="backgroundColor" systemColor="secondaryLabelColor"/>
                                             </backgroundConfiguration>
                                             <attributedString key="attributedTitle">
-                                                <fragment content="Button">
+                                                <fragment content="死">
                                                     <attributes>
-                                                        <font key="NSFont" size="30" name="Helvetica"/>
+                                                        <font key="NSFont" size="30" name="HiraginoSans-W3"/>
+                                                        <font key="NSOriginalFont" size="30" name="Helvetica"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
@@ -135,9 +142,11 @@
                                                 <color key="backgroundColor" systemColor="secondaryLabelColor"/>
                                             </backgroundConfiguration>
                                             <attributedString key="attributedTitle">
-                                                <fragment content="Button">
+                                                <fragment content="カードに封印">
                                                     <attributes>
-                                                        <font key="NSFont" size="30" name="Helvetica"/>
+                                                        <font key="NSFont" size="30" name="HiraginoSans-W3"/>
+                                                        <font key="NSOriginalFont" size="30" name="Helvetica"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
@@ -146,20 +155,40 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hzq-MH-5hv">
+                                <rect key="frame" x="50" y="333.5" width="314" height="229"/>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="229" id="fL9-Mm-a6n"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="x" translatesAutoresizingMaskIntoConstraints="NO" id="Xw9-si-QIJ">
+                                <rect key="frame" x="57" y="298" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="b2I-5s-iDs"/>
+                                    <constraint firstAttribute="height" constant="300" id="pVG-NA-dhD"/>
+                                </constraints>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Uo7-GP-mZW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="hzq-MH-5hv" firstAttribute="centerY" secondItem="bD2-Qb-bHK" secondAttribute="centerY" id="2gE-dy-l8C"/>
                             <constraint firstItem="Uo7-GP-mZW" firstAttribute="trailing" secondItem="ICZ-Jd-8cC" secondAttribute="trailing" constant="20" id="4PM-cX-Qnr"/>
+                            <constraint firstItem="hzq-MH-5hv" firstAttribute="centerX" secondItem="bD2-Qb-bHK" secondAttribute="centerX" id="8Pj-Hx-fL9"/>
                             <constraint firstItem="ICZ-Jd-8cC" firstAttribute="leading" secondItem="Uo7-GP-mZW" secondAttribute="leading" constant="20" id="9hj-vE-f4i"/>
                             <constraint firstItem="Uo7-GP-mZW" firstAttribute="bottom" secondItem="fIR-n6-ehd" secondAttribute="bottom" constant="33" id="AzC-Em-HVp"/>
                             <constraint firstItem="Uo7-GP-mZW" firstAttribute="trailing" secondItem="IIb-kS-bWH" secondAttribute="trailing" constant="20" id="D6r-c5-aQW"/>
                             <constraint firstItem="IIb-kS-bWH" firstAttribute="top" secondItem="ICZ-Jd-8cC" secondAttribute="bottom" constant="20" id="GKt-It-22o"/>
+                            <constraint firstItem="Xw9-si-QIJ" firstAttribute="centerY" secondItem="bD2-Qb-bHK" secondAttribute="centerY" id="Ixh-3r-eXy"/>
                             <constraint firstItem="fIR-n6-ehd" firstAttribute="top" secondItem="bD2-Qb-bHK" secondAttribute="top" constant="247" id="JCv-tc-lj3"/>
                             <constraint firstItem="Uo7-GP-mZW" firstAttribute="trailing" secondItem="fIR-n6-ehd" secondAttribute="trailing" constant="20" id="YpS-Gp-akz"/>
                             <constraint firstItem="IIb-kS-bWH" firstAttribute="leading" secondItem="Uo7-GP-mZW" secondAttribute="leading" constant="20" id="Zlp-wT-zBC"/>
+                            <constraint firstItem="Xw9-si-QIJ" firstAttribute="centerX" secondItem="bD2-Qb-bHK" secondAttribute="centerX" id="e5f-lC-mQ3"/>
                             <constraint firstItem="fIR-n6-ehd" firstAttribute="leading" secondItem="Uo7-GP-mZW" secondAttribute="leading" constant="20" id="eJD-st-qRL"/>
                             <constraint firstItem="ICZ-Jd-8cC" firstAttribute="top" secondItem="Uo7-GP-mZW" secondAttribute="top" constant="8" id="gh9-1m-pny"/>
+                            <constraint firstItem="Uo7-GP-mZW" firstAttribute="trailing" secondItem="hzq-MH-5hv" secondAttribute="trailing" constant="50" id="pPP-gV-QJC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Fgq-zb-nfa"/>
@@ -168,8 +197,68 @@
             </objects>
             <point key="canvasLocation" x="679.71014492753625" y="79.6875"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="rBd-Oj-VGD">
+            <objects>
+                <viewController storyboardIdentifier="result" id="o06-Sc-YYb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OSW-MK-xGD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="9OD-nW-lRR">
+                                <rect key="frame" x="20" y="189" width="374" height="314"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="正解率は" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vfp-AX-I1z">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="104.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VGP-Ki-ttE">
+                                        <rect key="frame" x="0.0" y="104.5" width="374" height="105"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="でした" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dds-27-2Br">
+                                        <rect key="frame" x="0.0" y="209.5" width="374" height="104.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QbF-Jv-txN">
+                                <rect key="frame" x="20" y="564.5" width="374" height="48.5"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="26"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="タイトルへ戻る">
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5Wp-OS-xcR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="QbF-Jv-txN" firstAttribute="leading" secondItem="5Wp-OS-xcR" secondAttribute="leading" constant="20" id="SiM-be-NCK"/>
+                            <constraint firstItem="9OD-nW-lRR" firstAttribute="top" secondItem="5Wp-OS-xcR" secondAttribute="top" constant="145" id="Uyu-Po-4RY"/>
+                            <constraint firstItem="5Wp-OS-xcR" firstAttribute="bottom" secondItem="9OD-nW-lRR" secondAttribute="bottom" constant="359" id="ZmP-Wa-ToT"/>
+                            <constraint firstItem="9OD-nW-lRR" firstAttribute="leading" secondItem="5Wp-OS-xcR" secondAttribute="leading" constant="20" id="dAF-LZ-ZgE"/>
+                            <constraint firstItem="5Wp-OS-xcR" firstAttribute="trailing" secondItem="QbF-Jv-txN" secondAttribute="trailing" constant="20" id="gzA-9k-eTb"/>
+                            <constraint firstItem="5Wp-OS-xcR" firstAttribute="trailing" secondItem="9OD-nW-lRR" secondAttribute="trailing" constant="20" id="nn1-BW-vnV"/>
+                            <constraint firstItem="5Wp-OS-xcR" firstAttribute="bottom" secondItem="QbF-Jv-txN" secondAttribute="bottom" constant="249" id="xSr-U2-rP0"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U0e-5t-S1z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1373.913043478261" y="79.6875"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="circle" width="16" height="16"/>
+        <image name="x" width="16" height="16"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
@@ -181,6 +270,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
