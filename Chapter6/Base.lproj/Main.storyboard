@@ -50,10 +50,10 @@
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="79.6875"/>
         </scene>
-        <!--View Controller-->
+        <!--Question View Controller-->
         <scene sceneID="Nsr-HX-UKx">
             <objects>
-                <viewController storyboardIdentifier="question" modalPresentationStyle="fullScreen" id="Me1-6i-VAG" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="question" modalPresentationStyle="fullScreen" id="Me1-6i-VAG" customClass="QuestionViewController" customModule="Chapter6" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bD2-Qb-bHK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -77,7 +77,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fIR-n6-ehd">
                                 <rect key="frame" x="20" y="247" width="374" height="582"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fnn-Mf-28c">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fnn-Mf-28c">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="138"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain">
@@ -95,8 +95,16 @@
                                             </attributedString>
                                             <color key="baseForegroundColor" systemColor="secondarySystemBackgroundColor"/>
                                         </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="no">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="tapAnswer:" destination="Me1-6i-VAG" eventType="touchUpInside" id="34o-aI-M5c"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c4K-Oq-xua">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c4K-Oq-xua">
                                         <rect key="frame" x="0.0" y="148" width="374" height="138"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain">
@@ -114,8 +122,16 @@
                                             </attributedString>
                                             <color key="baseForegroundColor" systemColor="secondarySystemBackgroundColor"/>
                                         </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="no">
+                                                <integer key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="tapAnswer:" destination="Me1-6i-VAG" eventType="touchUpInside" id="JF2-1I-xuj"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e95-RO-VYi">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e95-RO-VYi">
                                         <rect key="frame" x="0.0" y="296" width="374" height="138"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain">
@@ -133,8 +149,16 @@
                                             </attributedString>
                                             <color key="baseForegroundColor" systemColor="secondarySystemBackgroundColor"/>
                                         </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="no">
+                                                <integer key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="tapAnswer:" destination="Me1-6i-VAG" eventType="touchUpInside" id="Vai-Mh-WLS"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KSh-KM-wRg">
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KSh-KM-wRg">
                                         <rect key="frame" x="0.0" y="444" width="374" height="138"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain">
@@ -152,6 +176,14 @@
                                             </attributedString>
                                             <color key="baseForegroundColor" systemColor="secondarySystemBackgroundColor"/>
                                         </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="no">
+                                                <integer key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="tapAnswer:" destination="Me1-6i-VAG" eventType="touchUpInside" id="fGe-XE-5pC"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -192,15 +224,25 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Fgq-zb-nfa"/>
+                    <connections>
+                        <outlet property="answer1" destination="Fnn-Mf-28c" id="Apc-pD-ZH3"/>
+                        <outlet property="answer2" destination="c4K-Oq-xua" id="MYY-MK-KKh"/>
+                        <outlet property="answer3" destination="e95-RO-VYi" id="JfT-yf-pKM"/>
+                        <outlet property="answer4" destination="KSh-KM-wRg" id="ps8-6u-llB"/>
+                        <outlet property="correct" destination="hzq-MH-5hv" id="KeF-J4-nOA"/>
+                        <outlet property="incorrect" destination="Xw9-si-QIJ" id="X7s-1e-XMo"/>
+                        <outlet property="question" destination="IIb-kS-bWH" id="HdI-T5-SAp"/>
+                        <outlet property="questionNo" destination="ICZ-Jd-8cC" id="OWi-qg-HUB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xFU-jh-DxW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="679.71014492753625" y="79.6875"/>
         </scene>
-        <!--View Controller-->
+        <!--Result View Controller-->
         <scene sceneID="rBd-Oj-VGD">
             <objects>
-                <viewController storyboardIdentifier="result" id="o06-Sc-YYb" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="result" modalPresentationStyle="fullScreen" id="o06-Sc-YYb" customClass="ResultViewController" customModule="Chapter6" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OSW-MK-xGD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -236,6 +278,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="タイトルへ戻る">
                                     <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="2Fg-2i-slP" kind="unwind" unwindAction="gotoTitle:" id="9Nk-Jr-EaX"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5Wp-OS-xcR"/>
@@ -250,8 +295,12 @@
                             <constraint firstItem="5Wp-OS-xcR" firstAttribute="bottom" secondItem="QbF-Jv-txN" secondAttribute="bottom" constant="249" id="xSr-U2-rP0"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="correctPercentLabel" destination="VGP-Ki-ttE" id="7GB-iY-gAM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U0e-5t-S1z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="2Fg-2i-slP" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1373.913043478261" y="79.6875"/>
         </scene>

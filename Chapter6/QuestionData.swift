@@ -7,24 +7,32 @@
 
 import Foundation
 
-struct QuestionData {
-    var title: String;
+struct Questions: Codable {
+    var questions: [QuestionData]
     
-    var choice1: String;
-    var choice2: String;
-    var choice3: String;
-    var choice4: String;
-    
-    var answer: Int;
-    
-    var userChoiceAnswerNumber: Int?
-    
-    var questionNo: Int = 0;
-    
-    func isCorrect() -> Bool {
-        if answer == userChoiceAnswerNumber {
-            return true;
+    // 複数のviewから参照したいのでClass定義
+    class QuestionData: Codable {
+        var questionNo: Int
+        
+        var title: String
+        
+        var choice1: String
+        var choice2: String
+        var choice3: String
+        var choice4: String
+        
+        var answer: Int
+        
+        var userChoiceAnswerNumber: Int?
+        
+        func isCorrect() -> Bool {
+            if answer == userChoiceAnswerNumber {
+                return true
+            }
+            return false
         }
-        return false;
-    }
- }
+     }
+}
+
+
+
