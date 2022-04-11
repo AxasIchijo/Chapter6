@@ -15,16 +15,10 @@ class ResultViewController: UIViewController {
         
         let questions = QuestionDataManager.sharedInstance.questionDataArray
         
-        let questionCount = questions.count
+        let questionCount = Float(questions.count)
+        let correctCount = Float(questions.filter { $0.isCorrect() }.count)
         
-        var correctCount = 0
-        for questionData in questions {
-            if questionData.isCorrect() {
-                correctCount += 1
-            }
-        }
-        
-        let percentage = (Float(correctCount) / Float(questionCount)) * 100
+        let percentage = (correctCount / questionCount) * 100
         
         correctPercentLabel.text = String(format: "%.1f", percentage) + "%"
     }

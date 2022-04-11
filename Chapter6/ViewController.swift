@@ -16,11 +16,8 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         QuestionDataManager.sharedInstance.loadQuestion()
         
-        guard let nextViewController = segue.destination as? QuestionViewController else {
-            return
-        }
-        
-        guard let questionData = QuestionDataManager.sharedInstance.nextQuestion() else {
+        guard let nextViewController = segue.destination as? QuestionViewController ,
+        let questionData = QuestionDataManager.sharedInstance.nextQuestion() else {
             return
         }
         

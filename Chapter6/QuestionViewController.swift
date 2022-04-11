@@ -49,9 +49,10 @@ class QuestionViewController: UIViewController {
         AudioServicesPlayAlertSound(1025)
         
         UIView.animate(withDuration: 2.0, animations: {
-            self.correct.alpha = 1.0
-        }) { (Bool) in
-            self.goNextQuestion()
+            [weak self] in
+            self?.correct.alpha = 1.0
+        }) { [weak self] _ in
+            self?.goNextQuestion()
         }
     }
     
@@ -59,9 +60,10 @@ class QuestionViewController: UIViewController {
         AudioServicesPlayAlertSound(1006)
         
         UIView.animate(withDuration: 2.0, animations: {
-            self.incorrect.alpha = 1.0
-        }) { (Bool) in
-            self.goNextQuestion()
+            [weak self] in
+            self?.incorrect.alpha = 1.0
+        }) { [weak self] _ in
+            self?.goNextQuestion()
         }
     }
     
